@@ -1,6 +1,8 @@
 # 阅读随笔：Coginitive Architectures for Language Agents
 
-Paper link: https://arxiv.org/abs/2309.02427
+Paper link: https://arxiv.org/abs/2309.02427.
+
+Document created on Nov. 11th, 2024.
 
 ## 一些思考
 
@@ -25,7 +27,7 @@ AIGC 的可控性和稳定性是短板，为了弥补这些短板，甚至衍生
 
 ## CoALA 介绍
 
-架构设计如下：
+顾名思义，CoALA 是一个基于语言模型的认知架构，其架构设计如下：
 
 ![coala-architecture.png](assets/coala-architecture.png)
 
@@ -35,6 +37,32 @@ AIGC 的可控性和稳定性是短板，为了弥补这些短板，甚至衍生
 
 ### Memory
 
+下面将分别介绍 CoALA 的几种记忆。
+
+**Working Memory** 可以理解为 CoALA 的总线状态。
+它与架构的各个部分进行通信，比如与外界环境交互，与记忆模块交互，与 LLM 交互。
+因此，它包含了架构的整体的状态，并且充当连接各模块的桥梁。
+
+**Episodic Memory** 存放 CoALA 的经验信息。
+比如一些 LLM 的对话历史记录，一些经验片段等等。可以为任务提供一些“shot”。
+
+**Semantic Memory** 存放 CoALA 的知识。
+比如一些关于世界上一些事物的常识，以及关于智能体自身的知识。
+
+**Procedural Memory** 是运行过程中没有被模块化的记忆。
+包括隐式的在 LLM 权重中的记忆，和显式的在智能体代码中写入的记忆。
+比如机器人三定律，可以写在智能体代码中。
+
 ### Actions
+
+下面将分别介绍 CoALA 的几种动作。
+
+**Grounding Actions**
+
+**Retrieval Actions**
+
+**Reasoning Actions**
+
+**Learning Actions**
 
 ### Decision-Making
